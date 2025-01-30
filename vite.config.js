@@ -4,14 +4,18 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel([
-            'resources/css/app.css', // Se você tiver um CSS principal para o Vite processar
-            'resources/js/app.js',   // Se você tiver um JS principal para o Vite processar
+            'resources/css/app.css',
+            'resources/js/app.js',
         ]),
     ],
-    // Remova ou comente a linha abaixo se não estiver usando um framework como Vue ou React
-    // resolve: {
-    //     alias: {
-    //         vue: 'vue/dist/vue.esm-bundler.js',
-    //     },
-    // },
+    server: {
+        proxy: {
+            '\\/api': { // Correção para Windows
+                target: 'http://localhost:8000',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\\\/api/, ''),
+            },
+        },
+    },
+    base: '/Curriculo-Online/' // Adicione esta linha, alterando para o nome do seu repositório se for diferente
 });

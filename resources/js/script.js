@@ -26,10 +26,11 @@ document.querySelectorAll('.progress-container').forEach(container => {
 });
 
 function getVisitorCount() {
-    return fetch('https://api.countapi.xyz/hit/nilsong87-github-io-curriculo-online/visitas')
+    return fetch('/api/countapi') // URL relativa, usando o proxy do Vite e a rota do Laravel
         .then(response => response.json())
         .then(data => data.value);
 }
+
 
 function updateVisitorCounter() {
     getVisitorCount().then(count => {
