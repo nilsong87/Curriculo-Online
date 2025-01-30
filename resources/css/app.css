@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nova Square", sans-serif;
+    background-image: url('../../public/img/settings/fundo.jpg'); /* Correto */
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+
+#visitor-counter {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.90);
+    /* Fundo branco com transparência para melhor legibilidade */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* Restante do seu CSS... (header, photo, section-title, etc.) */
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-title {
+    font-size: 1.75em;
+    margin-bottom: 15px;
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-container span {
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.progress {
+    width: 80%;
+    height: 20px;
+    margin: 0;
+}
+
+.progress-bar {
+    height: 100%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+@media print {
+    body {
+        background-color: #fff;
+        color: black;
+    }
+
+    .container {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .header,
+    .footer,
+    .section-title,
+    .contact-item,
+    .progress-container,
+    .progress-bar,
+    .photo {
+        color: black;
+        background-color: none;
+    }
+
+    .section-title {
+        color: #007bff;
+        border-bottom-color: #007bff;
+    }
+
+    .progress-bar {
+        background-color: #007bff !important;
+        color: white !important;
+    }
+
+    .footer {
+        background-color: #343a40;
+        color: white;
+    }
+}
