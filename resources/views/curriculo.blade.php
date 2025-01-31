@@ -155,13 +155,13 @@
         <div class="progress-container">
             <i class="flag-icon flag-icon-us"></i> <span><strong>Inglês</strong></span>
             <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Intermediario</div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Intermediário</div>
             </div>
         </div>
         <div class="progress-container">
             <i class="flag-icon flag-icon-es"></i> <span><strong>Espanhol</strong></span>
             <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Intermediario</div>
+                <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Intermediário</div>
             </div>
         </div>
     </div>
